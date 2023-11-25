@@ -1,17 +1,23 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import models.Computer;
+
+//* Builder Pattern, a creational design pattern, is used to construct a complex object without directly instantiating the object.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press F6 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Computer computer = new Computer.Builder("Intel i7", "16GB", "1TB")
+                .setKeyboard("Logitech")
+                .setMouse("Logitech")
+                .setMonitor("LG")
+                .setPowerSupply("Corsair")
+                .build();
 
-            // Press Ctrl+F5 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        Computer computer2 = new Computer.Builder("Intel i7", "16GB", "1TB")
+                .setKeyboard("Logitech")
+                .setMouse("Logitech")
+                .setMonitor("LG")
+                .build();
+
+        System.out.println(computer.toString());
+        System.out.println(computer2.toString());
     }
 }
