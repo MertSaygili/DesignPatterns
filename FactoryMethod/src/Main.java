@@ -1,17 +1,20 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import models.DesertFactory;
+import models.IDesert;
+import models.enums.DesertTypes;
+
+//* Factory Method example, with a simple desert factory.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        IDesert peachPie = DesertFactory.createDesert(DesertTypes.PEACH_PIE, "10", "0");
+        IDesert puding = DesertFactory.createDesert(DesertTypes.PUDING, "15", "0");
 
-        // Press F6 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println(peachPie.getHistory());
+        System.out.println(peachPie.getIngredients());
+        System.out.println(peachPie.getTaste());
 
-            // Press Ctrl+F5 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println(puding.getHistory());
+        System.out.println(puding.getIngredients());
+        System.out.println(puding.getTaste());
+
     }
 }
