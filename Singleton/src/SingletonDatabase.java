@@ -14,7 +14,7 @@ public class SingletonDatabase {
         this.connectionString = connectionString;
     }
 
-    // Only one thread can access this method at a time
+    //* Only one thread can access this method at a time --> synchronized
     public static synchronized SingletonDatabase getInstance(String connectionString) {
         // If instance is null, create a new instance
         if (instance == null) {
