@@ -1,3 +1,3 @@
 # DesignPatterns
 
-Design Pattern examples
+Design Pattern Code examples. Written with java.
